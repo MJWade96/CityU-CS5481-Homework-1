@@ -67,7 +67,7 @@ def main():
     print_test_results(results6, "6. 加拿大邮政编码")
     
     # 7. 首尾字符相同的字符串
-    pattern7 = r'^(.).*\1$'
+    pattern7 = r'^(.).*\1$|^.$'  # 修改为允许单个字符的情况
     test_cases7 = ['level', 'stats', 'world', 'a', 'aa']
     expected7 = [True, True, False, True, True]  # 单个字符也算首尾相同
     results7 = test_regex(pattern7, test_cases7, expected7)
